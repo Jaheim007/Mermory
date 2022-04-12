@@ -1,27 +1,26 @@
-Before beginning my web scrap I have to verify if Beautiful soup and requests modules are installed:
+Avant de commencer mon scrap web je dois vérifier si les modules Beautiful soup et requests sont installés :
 Exemple:(pip install bs4 , pip install requests)
 
-Then I import them (from bs4 import BeautifulSoup and import requests)
+Ensuite je les importe (depuis bs4 import BeautifulSoup et import requests)
 
-After I begin to inspect the website that I want to scrap and take its url:
+Après je commence à inspecter le code html du site et je prends son url:
 
-OR 
+OU
 
-If i already have the html file download, i just have to open it with:
+Si j'ai déjà téléchargé le fichier html, il me suffit d'ouvrir le fichier:
 
 Exemple:
         f = open("nom_du_ficher", "r")
         html_content = f.read() 
         f.close()
-
-After this phrase, I used (requests.get()) to obtain the html source of the website that I will be scraping
+Après cette phase, j'ai utilisé (requests.get()) pour obtenir le source html du site.
 
 Exemple:
     
 source = requests.get(url).text
 soup = BeautifulSoup(source, "lxml")
 
-To end my web scraping process, I inspect the tags that I need from the website and put it in my interface:
+Pour terminer mon processus de Web scraping, j'inspecte les balises dont j'ai besoin sur le site Web et je les mets dans mon interface :
 
 Exemple:
     

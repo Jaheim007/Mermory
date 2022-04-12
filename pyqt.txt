@@ -1,27 +1,30 @@
-Before creating my designer interface I create three folders and name them:
+Avant de créer mon interface dans pyqt designer je crée trois dossiers et les nomme:
 UI, Widget and Static 
 
-Within the (UI) folder will contain my interface which I created using pyqt designer:
+Dans le dossier (UI) contiendra mon interface que j'ai créée à l'aide de pyqt designer:
 Exemple:(design.ui)
 
-Then within the (Widget) folder will contain any python file that I will use execept the file (main.py)
-which I use to execute the application. 
+Ensuite, dans le dossier (Widget) contiendra tout fichier 
+python que j'utiliserai à l'exception du fichier (main.py)
+que j'utilise pour exécuter l'application.
 
-And finally, the (Static) folder will contain any images I used in the interface.
+Et enfin, le dossier (statique) contiendra toutes les images que j'ai utilisées dans l'interface.
 
-After this phase, I open the folder in my code editor.
+Après cette phase, j'ouvre le dossier dans mon éditeur de code.
 
-Once the code editor is open, I convert the UI file into a python file using the code:
+Une fois l'éditeur de code ouvert et le dossier ouvert, je convertis le fichier UI en un fichier python en utilisant le code :
 
 Exemple:
 pyuic5 -x filename.ui -o filename.py 
 
-Then I convert the resource.qrc file into a python file using the code:
+Ensuite, je convertis le resource.qrc qui me permet d'ajouter des images dans 
+les fichiers ui dans un fichier python en utilisant le code :
 
 Exemple:
 pyrcc5 -o filename.py resource.qrc
 
-And to finish, I create two extra python file which in one file will contain all the conditons I want to use in the interface.
+Et pour finir, je crée deux fichiers python supplémentaires qui dans un seul fichier
+contiendront toutes les conditions que je souhaite utiliser dans l'interface.
 Exemple:
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox
@@ -32,7 +35,7 @@ def __init__(self):
     self.setupUi(self)
     self.start_now_btn.clicked.connect(self.started)
 
-The another file which is the (main.py) to run my program
+L'autre fichier qui est le (main.py) pour exécuter mon programme.
 
 import sys 
 from PyQt5.QtWidgets import QApplication, QMainWindow
@@ -49,8 +52,7 @@ def main():
 if __name__ == '__main__':
     main()
 
-I do this in order not to mix my interface which my conditons and make the code long.
-
+Je fais cela pour ne pas mélanger mon interface avec mes conditions et rendre le code long.
 FIN
 
 

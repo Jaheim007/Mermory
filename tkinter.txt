@@ -1,12 +1,28 @@
 Avant de commencer j'importe tous les modules que j'ai besoin d'utiliser
-Exemple
+Exemple:
 
 from tkinter import * OR import tkinter
 
-The difference between these are that when you import(from tkinter import *) this selects 
-all elements which exist within tkinter, which allows to not put (infront of every property). 
+La différence entre ceux-ci est que lorsque vous importez (depuis tkinter import *), cela sélectionne
+tous les éléments qui existent dans tkinter, ce qui permet de ne pas mettre (devant chaque propriété).
 
-(from tkinter import *)
-Exemple: 
+Exemple:
+
+heading = Label(frame1, text="My tkinter", font="Arial 25", bg="#2779b8")
+
+Mais pour (import tkinter) ce sera comme ça :
+
+heading = tkinter.Label(frame1, text="Horizon De Mer", font="Arial 25", bg="#2779b8") 
+
+Ensuite, j'ajoute une fenêtre et un titre de fenêtre :
+Exemple:
+
+window = Tk()
+window.title("My tkinter")
+
+puis ajouter tous les éléments dont j'ai besoin dans l'interface.
+
+
+
 
  
