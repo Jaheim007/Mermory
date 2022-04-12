@@ -1,0 +1,58 @@
+Before creating my designer interface I create three folders and name them:
+UI, Widget and Static 
+
+Within the (UI) folder will contain my interface which I created using pyqt designer:
+Exemple:(design.ui)
+
+Then within the (Widget) folder will contain any python file that I will use execept the file (main.py)
+which I use to execute the application. 
+
+And finally, the (Static) folder will contain any images I used in the interface.
+
+After this phase, I open the folder in my code editor.
+
+Once the code editor is open, I convert the UI file into a python file using the code:
+
+Exemple:
+pyuic5 -x filename.ui -o filename.py 
+
+Then I convert the resource.qrc file into a python file using the code:
+
+Exemple:
+pyrcc5 -o filename.py resource.qrc
+
+And to finish, I create two extra python file which in one file will contain all the conditons I want to use in the interface.
+Exemple:
+
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QMessageBox
+from Widget.filename import class_name
+
+def __init__(self):    
+    super().__init__()
+    self.setupUi(self)
+    self.start_now_btn.clicked.connect(self.started)
+
+The another file which is the (main.py) to run my program
+
+import sys 
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from Widget.filename import class_name
+
+
+def main():
+    app = QApplication(sys.argv)
+    home = Project()
+    home.show()
+    app.exec_()
+
+
+if __name__ == '__main__':
+    main()
+
+I do this in order not to mix my interface which my conditons and make the code long.
+
+FIN
+
+
+
+ 

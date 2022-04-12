@@ -1,0 +1,33 @@
+Before beginning my web scrap I have to verify if Beautiful soup and requests modules are installed:
+Exemple:(pip install bs4 , pip install requests)
+
+Then I import them (from bs4 import BeautifulSoup and import requests)
+
+After I begin to inspect the website that I want to scrap and take its url:
+
+OR 
+
+If i already have the html file download, i just have to open it with:
+
+Exemple:
+        f = open("nom_du_ficher", "r")
+        html_content = f.read() 
+        f.close()
+
+After this phrase, I used (requests.get()) to obtain the html source of the website that I will be scraping
+
+Exemple:
+    
+source = requests.get(url).text
+soup = BeautifulSoup(source, "lxml")
+
+To end my web scraping process, I inspect the tags that I need from the website and put it in my interface:
+
+Exemple:
+    
+    price = soup.find('ul', class_='grid grid--uniform grid--view-items')
+    prix = soup.find_all('li', class_ = 'grid__item grid__item--collection-template small--one-half medium-up--one-quarter')
+    map = soup.find_all('div', class_ = 'price__regular')
+
+FIN
+

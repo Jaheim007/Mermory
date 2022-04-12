@@ -1,0 +1,12 @@
+Avant de commencer j'importe tous les modules que j'ai besoin d'utiliser
+Exemple
+
+from tkinter import * OR import tkinter
+
+The difference between these are that when you import(from tkinter import *) this selects 
+all elements which exist within tkinter, which allows to not put (infront of every property). 
+
+(from tkinter import *)
+Exemple: 
+
+ 
